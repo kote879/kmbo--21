@@ -1,0 +1,49 @@
+#include <iostream>
+
+class Animal {
+public:
+	float wt;
+}
+
+class Mammal : public Animal {
+public:
+	float length;
+}
+
+class Bird : public Animal {
+public:
+	float wingspan;
+}
+
+class Cat : public Mammal {
+public:
+	float vibrissaLength
+}
+
+class Dog : public Mammal {
+public: 
+	float noseLength;
+}
+
+class Raven : public Bird {
+public:
+	float lifeExpectancy;
+};
+
+class Hummingbirds : public Bird {
+public:
+	float beakLength;
+};
+
+int main(int argc, char** argv)
+{
+	Cat wt = 4.5, length = 24, vibrissaLength = 6;
+	Dog wt = 18.5, length = 45, noseLength = 8.5;
+	Raven wt = 1.345, wingspan = 125, lifeExpectancy = 12.5;
+	Hummingbirds wt = 0.005, wingspan = 21.5, beakLength = 12;
+
+	return 0;
+}
+
+inline std::ostream& operator <<(std::ostream& os, const Animal& animal) {
+	return os << animal.about();
